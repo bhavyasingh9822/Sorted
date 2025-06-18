@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <h1 class="project-title">Sorting Visualizer</h1>
+
+    <div class="controls-container">
+      <!-- Buttons & slider here -->
+        <button onclick="renderNewArray()">New Array</button>
+  <button onclick="bubbleSort()">Bubble Sort</button>
+  <button onclick="selectionSort()">Selection Sort</button>
+  <button onclick="insertionSort()">Insertion Sort</button>
+  <button onclick="quickSort(array, 0, array.length - 1)">Quick Sort</button>
+  <button onclick="mergeSort(array, 0, array.length - 1)">Merge Sort</button>
+
+  <label for="speedRange">Speed:</label>
+  <input type="range" min="10" max="1000" value="150" id="speedRange">
+    </div>
+
+    <div class="visualizer-container">
+      <div class="array-container" id="array-container"></div>
+    </div>
+
+    <footer class="footer">
+      Designed with ❤️ by Bhavya Singh
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

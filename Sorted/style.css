@@ -1,0 +1,126 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Heading */
+.project-title {
+  text-align: center;
+  padding: 1em;
+  font-size: 2em;
+  color: #333;
+}
+
+/* Colored control bar */
+.controls-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+  background-color: #00416a;
+  padding: 1em;
+}
+
+.controls-container button {
+  background-color: white;
+  color: #00416a;
+  border: none;
+  padding: 0.5em 1em;
+  font-weight: bold;
+  border-radius: 0.4em;
+  cursor: pointer;
+}
+
+.controls-container button:hover {
+  background-color: #ddd;
+}
+
+.controls-container label {
+  color: white;
+  font-weight: bold;
+  align-self: center;
+}
+
+.controls-container input[type="range"] {
+  width: 150px;
+  margin-left: 0.5em;
+}
+
+/* Visualizer */
+.visualizer-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.array-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 1em;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 1em;
+}
+
+.array-bar {
+  aspect-ratio: 1 / 1;
+  background-color: rgb(8, 8, 151);
+  border-radius: 0.5em;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sticky footer at the very bottom */
+.footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #222;
+  color: #eee;
+  margin-top: auto;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .array-container {
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  }
+
+  .controls-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .controls-container input[type="range"] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-title {
+    font-size: 1.5em;
+  }
+
+  .array-bar {
+    font-size: 1em;
+  }
+
+  .controls-container button {
+    padding: 0.5em;
+    font-size: 0.9em;
+  }
+}
+ 
